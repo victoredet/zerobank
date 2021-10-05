@@ -18,11 +18,12 @@
                     <div class="form-group my-3 ">
                         <label>Password</label>
                         <input required autofocus type="password" class="form-control border-0 shadow ">
-                    </div>
+                    </div><router-link to="/user/dashboard">dashbord</router-link>
+
                     <button class="btn btn-lg btn-primary shadow" type="submit">Log In</button>
                 </form>
                 <p class="text-primary text-center mx-auto position-fixed bottom-0">Stripped down to just security and anonimousity</p>
-
+                
             </div>
         </div>
     </div>

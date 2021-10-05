@@ -9,8 +9,9 @@
                 <br>
                 <p class="text-center text-success fw-bold">oops! You can only sign up by referral and recommendation</p>
                 <br>
-            </div>
 
+            </div>
+            <p class="text-center text-white position-fixed bottom-0">All rights reserved - ZeroBank Team 2021 </p>
         </section>
     </div>
     

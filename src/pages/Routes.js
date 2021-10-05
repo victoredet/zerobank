@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router';
 import Profile from './Profile.vue'
 import Login from './Login.vue'
+import Dashboard from './Dashboard.vue'
 import Transactions from './Transactions.vue'
 import Home from './Home.vue'
 
@@ -20,6 +21,10 @@ export const router = createRouter({
       path: '/user/profile',
       component: Profile,
     },
+    {
+        path: '/user/dashboard',
+        component: Dashboard,
+      },
     {
       path: '/transactions',
       component: Transactions,
