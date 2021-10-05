@@ -13,11 +13,11 @@
                 <form action="" class="">
                     <div class="form-group my-3">
                         <label>Email</label>
-                        <input required autofocus type="email" class="form-control ">
+                        <input required autofocus type="email" class="form-control border-0 shadow">
                     </div>
                     <div class="form-group my-3 ">
                         <label>Password</label>
-                        <input required autofocus type="password" class="form-control ">
+                        <input required autofocus type="password" class="form-control border-0 shadow ">
                     </div>
                     <button class="btn btn-lg btn-primary shadow" type="submit">Log In</button>
                 </form>
