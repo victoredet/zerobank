@@ -18,6 +18,6 @@
 
 <script>
     export default{
-        name:'Nav-bottom'
+        name:'NavBottom'
     }
 </script>

@@ -1,0 +1,3 @@
+<template>
+    trans page
+</template>
