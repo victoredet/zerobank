@@ -6,7 +6,7 @@
             </router-link>
         </div>
         <div class="nav-bottom-item col">
-            <router-link to="/transfer">
+            <router-link to="/transactions">
                 <h3 class="text-primary text-center fw-bold fs-1"><span class="fa fa-exchange"></span></h3>
             </router-link>
         </div>

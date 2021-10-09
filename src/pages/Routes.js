@@ -18,11 +18,11 @@ export const router = createRouter({
       component: Login,
     },
     {
-      path: '/user/profile',
+      path: '/profile',
       component: Profile,
     },
     {
-        path: '/user/dashboard',
+        path: '/dashboard',
         component: Dashboard,
       },
     {
