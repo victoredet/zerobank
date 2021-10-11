@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <router-view @add-history="addHistory" />
+  <router-view/>
 </template>
 
 <style lang="scss">
