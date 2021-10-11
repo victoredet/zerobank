@@ -3,7 +3,7 @@
         <NavTop />
         <section class="container">
             <div class="banner">
-                <p class="fw-bold fs-1 col-8 mx-auto text-secondary text-center">Stripped out to security and anonimousity, nothing else...</p>
+                <p class="fw-bold fs-1 col-8 mx-auto text-secondary text-center">Stripped out to security and anonymity, nothing else...</p>
             </div>
             <div class="">
                 <br>

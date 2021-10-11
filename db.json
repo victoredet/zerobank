@@ -1,0 +1,46 @@
+{
+    "user": [
+        {
+            "username":"franktook",
+            "account":"30000",
+            "email":"mrfranktook@yahoo.com",
+            "history":[{
+                "id":"jvoerireoire0",
+                "type":"Debit",
+                "amount":"60000",
+                "reciever":"gerard benoit",
+                "reciever's_bank":"boa"
+            },
+            {
+                "id":"jvoerireoe0",
+                "type":"Debit",
+                "amount":"60000",
+                "reciever":"Ken ft",
+                "reciever's_bank":"boa"
+            },
+            {
+                "id":"jvoerirre0",
+                "type":"Debit",
+                "amount":"60000",
+                "reciever":"voo carling",
+                "reciever's_bank":"boa"
+            },
+            {
+                "id":"jvoeri4rreoire0",
+                "type":"Debit",
+                "amount":"60000",
+                "reciever":"homp goot",
+                "reciever's_bank":"boa"
+            },
+            {
+                "id":"jvoerirejfjoire0",
+                "type":"Debit",
+                "amount":"60000",
+                "reciever":"gerard benoit",
+                "reciever's_bank":"boa"
+            }
+        ]
+            
+        }
+    ]
+}

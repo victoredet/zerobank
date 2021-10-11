@@ -13,11 +13,9 @@
                     <div class="row container">
                         <div class="col card border-0 shadow m-1">
                             <p class="">Account Balance</p>
-                            <h2>$30,000</h2>
+                            <h2> $ 30,000 </h2>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -28,8 +26,28 @@
 import NavBottom from '../components/NavBottom.vue';
 import Sidebar from '../components/Sidebar.vue';
 import NavTop from '../components/Nav-top.vue';
+
 export default {
     name:'Dashboard',
+
+    data(){
+        return{
+            accountBal:[]
+        }
+    },
+
+    methods:{
+        async getUser(){
+            const res = await fetch('http://localhost/3001/user')
+            
+            const data = await res.json()
+            console.log(data)
+        }
+    },
+     async created(){
+       this.getUser() = await this.getUser()
+    },
+
     components:{
         Sidebar,
         NavBottom,
