@@ -122,15 +122,14 @@ export default {
                 alert('Please enter amount')
                 return
             }
+            const transaction = {
+                amount:this.amount,
+                date:this.date,
+                accountName:this.accountName,
+                zipcode:this.zipcode
 
-            const newHistory = {
-                // id = Math.floor(Math.random()*100000 ),
-                amount: this.amount,
             }
-            this.$emit('add-history', newHistory)
-            
-            this.amount=''
-
+            this.$store.commit('updateTransHistory', transaction)
             this.$router.push('user/dashboard');
         }
     },

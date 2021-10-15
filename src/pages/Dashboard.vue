@@ -13,7 +13,25 @@
                     <div class="row container">
                         <div class="col card border-0 shadow m-1">
                             <p class="">Account Balance</p>
-                            <h2> $ 30,000 </h2>
+                            <div>
+                                <h2>${{$store.state.accountBal }} </h2>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <h3 class="fw-bold text-primary m-2 mt-4">Transactions</h3>
+                    <div class="container bg-white shadow-sm">
+                        <div v-for="transaction in $store.state.transHistory" :key="transaction.id" class="transaction border-2 border-bottom">
+                            <div class="d-flex">
+                                <div class="col-5">
+                                    <p class="m-3">${{transaction.amount}}</p>
+                                    
+                                </div>
+                                <div class="col-5">
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -28,26 +46,7 @@ import Sidebar from '../components/Sidebar.vue';
 import NavTop from '../components/Nav-top.vue';
 
 export default {
-    name:'Dashboard',
-
-    data(){
-        return{
-            accountBal:[]
-        }
-    },
-
-    methods:{
-        async getUser(){
-            const res = await fetch('http://localhost/3001/user')
-            
-            const data = await res.json()
-            console.log(data)
-        }
-    },
-     async created(){
-       this.getUser() = await this.getUser()
-    },
-
+    name:'Dashboard',    
     components:{
         Sidebar,
         NavBottom,
