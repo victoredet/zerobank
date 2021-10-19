@@ -13,7 +13,7 @@
                     <p>Send money to/from other banks, or to someone else using an account number</p>
                 </div>
                 <div class="trans-form col-md-7 col-10 m-3">
-                    <form action="" @submit="onSubmit">
+                    <form action="" @submit.prevent="onSubmit">
                         <div class="form-group mt-3">
                             <label>Destination Account:  <span class="text-danger">*</span></label>
                            <select class="form-select" required aria-label="Default select example">
@@ -106,7 +106,11 @@ import NavTop from '../components/Nav-top.vue';
 
 export default {
     name:'Transactions',
-    
+    beforeMount(){
+    if(!this.$store.state.auth){
+      this.$router.push('/login')
+    }
+  },
     data(){
         return{
             date:'',
@@ -116,8 +120,7 @@ export default {
         }
     },
     methods:{
-        onSubmit(e){
-            e.preventDefault()
+        onSubmit(){
             if(!this.amount){
                 alert('Please enter amount')
                 return
@@ -127,10 +130,9 @@ export default {
                 date:this.date,
                 accountName:this.accountName,
                 zipcode:this.zipcode
-
             }
             this.$store.commit('updateTransHistory', transaction)
-            this.$router.push('user/dashboard');
+            this.$router.push('/success');
         }
     },
     components:{

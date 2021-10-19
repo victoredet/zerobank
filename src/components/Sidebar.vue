@@ -14,15 +14,29 @@
             <router-link to="/transactions">
                 <h3 class="text-white my-4"><span class="fa fa-exchange"></span> Transfer</h3>
             </router-link>
-            <router-link to="/transactions">
+            <router-link to="/cards">
                 <h3 class="text-white my-4"><span class="fa fa-credit-card"></span> Cards</h3>
             </router-link>
-            <router-link to="/transactions">
-                <h3 class="text-white my-4"><span class="fa fa-sign-out"></span> Log Out</h3>
-            </router-link>
+            
+                <h3 class="text-white my-4" @click="logout()"><span class="fa fa-sign-out"></span> Log Out</h3>
         </div>
     </div>
 </template>
+<script>
+
+export default {
+    name:'Sidebar',
+    methods:{
+        logout(){
+            
+            this.$store.commit('logout')
+            console.log(this.$store.state.auth)
+            this.$router.push('/login')
+        }
+    }
+}
+</script>
+
 <style scoped>
 
 </style>

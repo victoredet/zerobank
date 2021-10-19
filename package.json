@@ -5,19 +5,20 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "backend": "json-server --watch db.json --port 3001 --no-cors --nc"
+    "backend": "json-server --watch db.json --port 5000"
   },
   "dependencies": {
     "bootstrap": "^5.1.1",
     "json-server": "^0.17.0",
-    "sass": "^1.42.1",
     "swiper": "^7.0.8",
     "vue": "^3.2.16",
-    "vue-router": "^4.0.11"
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.2",
     "node-sass": "^6.0.1",
+    "sass": "^1.42.1",
     "vite": "^2.6.0"
   }
 }

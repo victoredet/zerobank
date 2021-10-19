@@ -2,6 +2,7 @@ import Vuex from 'vuex'
 
 export default new Vuex.Store({
     state:{
+        auth: false,
         accountBal: 100000,
         count:0,
         transHistory:[
@@ -48,8 +49,11 @@ export default new Vuex.Store({
         updateTransHistory(state, transaction){
             state.accountBal = state.accountBal-transaction.amount
         },
-        updateOtp(state, otp){
-            state.otp = otp
+        setAuth(state){
+            state.auth = true 
+        },
+        logout(state){
+            state.auth = false 
         }
     },
     actions:{

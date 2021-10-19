@@ -3,6 +3,8 @@ import Profile from './Profile.vue'
 import Login from './Login.vue'
 import Dashboard from './Dashboard.vue'
 import Transactions from './Transactions.vue'
+import Success from './Success.vue'
+import Cards from './Cards.vue'
 import Home from './Home.vue'
 
 
@@ -23,11 +25,19 @@ export const router = createRouter({
     },
     {
         path: '/dashboard',
-        component: Dashboard,
+        component: Dashboard
       },
     {
       path: '/transactions',
       component: Transactions,
+    },
+    {
+      path: '/success',
+      component: Success,
+    },
+    {
+      path: '/cards',
+      component: Cards,
     },
   ],
 });

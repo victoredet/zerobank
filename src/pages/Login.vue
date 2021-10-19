@@ -10,15 +10,15 @@
         <div class="col-md-7 col-11 login">
             <div class="col-md-7 col-10 mx-auto">
                 <h1 class="text-primary my-5">Welcome back! </h1>
-                <form action="" class="">
+                <form action="" @submit.prevent="login()" class="">
                     <div class="form-group my-3">
                         <label>Email</label>
-                        <input required autofocus type="email" class="form-control border-0 shadow">
+                        <input required autofocus v-model="email" name="email" type="email" class="form-control border-0 shadow">
                     </div>
                     <div class="form-group my-3 ">
                         <label>Password</label>
-                        <input required autofocus type="password" class="form-control border-0 shadow ">
-                    </div><router-link to="/dashboard">dashbord</router-link>
+                        <input required autofocus v-model="password" name="password" type="password" class="form-control border-0 shadow ">
+                    </div>
 
                     <button class="btn btn-lg btn-primary shadow" type="submit">Log In</button>
                 </form>
@@ -28,3 +28,31 @@
         </div>
     </div>
 </template>
+<script lang="ts">
+export default{
+    name:'Login',
+    data(){
+        return{
+            password:'',
+            email:''
+        }
+    },
+    methods:{
+        login(){
+            const user = 'mrfranktook@yahoo.com'
+            const pass = 'password'
+            if(this.email !== user){
+                alert('invalid credentials')
+                return
+            }
+            if(this.password !== pass){
+                alert('invalid credentials')
+                return
+            }
+            this.$store.commit('setAuth')
+            console.log(this.$store.state.auth)
+             this.$router.push('./dashboard')
+        }
+    }
+}
+</script>

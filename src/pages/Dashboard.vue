@@ -46,7 +46,12 @@ import Sidebar from '../components/Sidebar.vue';
 import NavTop from '../components/Nav-top.vue';
 
 export default {
-    name:'Dashboard',    
+    name:'Dashboard',
+   beforeMount(){
+    if(!this.$store.state.auth){
+      this.$router.push('/login')
+    }
+  },
     components:{
         Sidebar,
         NavBottom,
