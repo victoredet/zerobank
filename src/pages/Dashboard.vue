@@ -47,7 +47,6 @@
 import NavBottom from '../components/NavBottom.vue';
 import Sidebar from '../components/Sidebar.vue';
 import NavTop from '../components/Nav-top.vue';
-import axios from 'axios'
 
 export default {
     name:'Dashboard',
@@ -55,21 +54,17 @@ export default {
     if(!this.$store.state.auth){
       this.$router.push('/login')
     }
-     
-    //   if(user.access)
   },
    mounted(){
-    // console.log(this.$store.state.transHistory)
-
-    //   await axios.get('https://bybit-autotrading.com/users/zero').then((response) => {
-    //       const account = response.data;
-    //        let test = localStorage.getItem('@user');
-    //   test = JSON.parse(test);
-    //   console.log(test)
-    //       console.log(account.accountBal)
-    //       this.$store.commit('initialAccBal', account)
-    //   })
-
+       let access = localStorage.getItem('@access')
+    // access = JSON.parse(access)
+    // console.log('access',access)
+    if(access){
+        alert('Your location is not verified. Contact our office for help')
+        this.$router.push('/login')
+        return
+    } 
+    
   },
     components:{
         Sidebar,

@@ -52,6 +52,7 @@ export default new Vuex.Store({
         updateTransHistory(state, transaction){
             state.accountBal = state.accountBal-transaction.amount
             state.transHistory = [...state.transHistory, transaction]
+            state.count = state.count+1
         },
         setAuth(state){
             state.auth = true 

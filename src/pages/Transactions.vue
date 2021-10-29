@@ -129,13 +129,14 @@ export default {
                 alert('Please enter amount')
                 return
             }
-            if(this.$store.state.count>2){
+            if(this.$store.state.count==4){
                 alert('You are making a third transfer from an unauthorised location. Please  visit our branch in your district to resolve this. Account will be placed on hold')
 
                 const payload = {
-                    access:false
+                    access:'true'
                 }
                 localStorage.setItem('@access', JSON.stringify(payload));
+                this.$router.push('/login')
                 return
             }
             const transaction = {
