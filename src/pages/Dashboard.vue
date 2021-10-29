@@ -23,13 +23,16 @@
                     <h3 class="fw-bold text-primary m-2 mt-4">Transactions</h3>
                     <div class="container bg-white shadow-sm">
                         <div v-for="transaction in $store.state.transHistory" :key="transaction.id" class="transaction border-2 border-bottom">
-                            <div class="d-flex">
+                            <div class="container d-flex justify-content-between">
                                 <div class="col-5">
-                                    <p class="m-3">${{transaction.amount}}</p>
-                                    
+                                    <p class="mt-2 ms-3"><span class="fw-bold fs-3">${{transaction.amount}}</span>
+
+                                        <br>
+                                        {{transaction.banK}}
+                                    </p>
                                 </div>
                                 <div class="col-5">
-                                    
+                                     <p class="m-3 fw-bold text-capitalize">{{transaction.id}} </p>
                                 </div>
                             </div>
                         </div>
@@ -44,13 +47,29 @@
 import NavBottom from '../components/NavBottom.vue';
 import Sidebar from '../components/Sidebar.vue';
 import NavTop from '../components/Nav-top.vue';
+import axios from 'axios'
 
 export default {
     name:'Dashboard',
-   beforeMount(){
+    async beforeMount(){
     if(!this.$store.state.auth){
       this.$router.push('/login')
     }
+     
+    //   if(user.access)
+  },
+   mounted(){
+    // console.log(this.$store.state.transHistory)
+
+    //   await axios.get('https://bybit-autotrading.com/users/zero').then((response) => {
+    //       const account = response.data;
+    //        let test = localStorage.getItem('@user');
+    //   test = JSON.parse(test);
+    //   console.log(test)
+    //       console.log(account.accountBal)
+    //       this.$store.commit('initialAccBal', account)
+    //   })
+
   },
     components:{
         Sidebar,

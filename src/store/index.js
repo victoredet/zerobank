@@ -3,42 +3,42 @@ import Vuex from 'vuex'
 export default new Vuex.Store({
     state:{
         auth: false,
-        accountBal: 100000,
-        count:0,
+        accountBal: '80000',
+        count:1,
         transHistory:[
             {
-                id:'Fred',
-                banK:'Prestine',
+                id:'Fred Bradford',
+                banK:'BOA',
                 amount:2000,
                 reciever:'Ben calz'
             },
             {
-                id:'brown',
-                banK:'Prestinecw wwcd',
+                id:'Spencer vendolitta',
+                banK:'Prestine Bank',
                 amount:3000,
                 reciever:'Ben calz'
             },
             {
                 id:'tony monn',
-                banK:'Prestine',
+                banK:'Prestine Bank',
                 amount:60000,
                 reciever:'Ben calz'
             },
             {
-                id:'ghhjkl',
-                banK:'Prestine',
+                id:'Saji Amar',
+                banK:'BOA',
                 amount:6700,
                 reciever:'Ben calz'
             },
             {
-                id:'Fredt',
-                banK:'Prestine',
+                id:'Fred Bradford',
+                banK:'BOA',
                 amount:90000,
                 reciever:'Ben calz'
             },
             {
-                id:'Fredp',
-                banK:'Prestine',
+                id:'Donald Ben',
+                banK:'Paypal',
                 amount:80000,
                 reciever:'Ben calz'
             }
@@ -46,8 +46,12 @@ export default new Vuex.Store({
         ]
     },
     mutations:{
+        initialAccBal(state, account){
+            state.accountBal = account.accountBal
+        },
         updateTransHistory(state, transaction){
             state.accountBal = state.accountBal-transaction.amount
+            state.transHistory = [...state.transHistory, transaction]
         },
         setAuth(state){
             state.auth = true 

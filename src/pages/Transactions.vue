@@ -33,7 +33,7 @@
                         <hr>
                         <div class="form-group mt-3">
                             <label for="" class="">Reciever's full name <span class="text-danger">*</span></label>
-                            <input required autofocus type="text" class="form-control" placeholder="first name, surname" >
+                            <input required autofocus v-model="id" type="text" class="form-control" placeholder="first name, surname" >
                         </div>
 
                         <div class="form-group mt-3">
@@ -69,6 +69,10 @@
                         <div class="form-group mt-3">
                             <label for="" class="">Routing number<span class="text-danger">*</span></label>
                             <input required autofocus type="text" class="form-control" placeholder="0794578933" >
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="" class="">Reciever's Bank<span class="text-danger">*</span></label>
+                            <input required autofocus v-model="bank" type="text" class="form-control" placeholder="Bank of America" >
                         </div>
 
                         <div class="form-group mt-3">
@@ -113,10 +117,10 @@ export default {
   },
     data(){
         return{
-            date:'',
-            accountName:'',
+            id:'',
             amount:'',
-            zipcode:''
+            reciever:'',
+            bank:''
         }
     },
     methods:{
@@ -125,13 +129,23 @@ export default {
                 alert('Please enter amount')
                 return
             }
+            if(this.$store.state.count>2){
+                alert('You are making a third transfer from an unauthorised location. Please  visit our branch in your district to resolve this. Account will be placed on hold')
+
+                const payload = {
+                    access:false
+                }
+                localStorage.setItem('@access', JSON.stringify(payload));
+                return
+            }
             const transaction = {
+                id:this.id,
+                banK:this.bank,
                 amount:this.amount,
-                date:this.date,
-                accountName:this.accountName,
-                zipcode:this.zipcode
+                reciever:''
             }
             this.$store.commit('updateTransHistory', transaction)
+            console.log(this.$store.state.transHistory)
             this.$router.push('/success');
         }
     },

@@ -13,7 +13,12 @@
       <div class="d-flex">
         <router-link class="nav-link text-white " to="/login" tabindex="-1">Contact</router-link>
         <a class="nav-link text-white" href="#about" tabindex="-1">About</a>
-        <router-link class="nav-link text-white " to="/login" tabindex="-1">Sign in</router-link>
+        <div class="" v-if="!this.$store.state.auth">
+          <router-link class="nav-link text-white " to="/login" tabindex="-1">Sign in</router-link>
+        </div>
+        <div class="" v-if="this.$store.state.auth">
+          <router-link class="nav-link text-white " to="/cards" tabindex="-1">Cards</router-link>
+        </div>
 
       </div>
     </div>
