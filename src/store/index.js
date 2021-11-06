@@ -3,43 +3,43 @@ import Vuex from 'vuex'
 export default new Vuex.Store({
     state:{
         auth: false,
-        accountBal: '80000',
+        accountBal: '800000',
         count:1,
         transHistory:[
             {
                 id:'Fred Bradford',
                 banK:'BOA',
-                amount:2000,
+                amount:20000,
                 reciever:'Ben calz'
             },
             {
                 id:'Spencer vendolitta',
                 banK:'Prestine Bank',
-                amount:3000,
+                amount:30000,
                 reciever:'Ben calz'
             },
             {
                 id:'tony monn',
                 banK:'Prestine Bank',
-                amount:60000,
+                amount:600000,
                 reciever:'Ben calz'
             },
             {
                 id:'Saji Amar',
                 banK:'BOA',
-                amount:6700,
+                amount:67000,
                 reciever:'Ben calz'
             },
             {
                 id:'Fred Bradford',
                 banK:'BOA',
-                amount:90000,
+                amount:900000,
                 reciever:'Ben calz'
             },
             {
                 id:'Donald Ben',
                 banK:'Paypal',
-                amount:80000,
+                amount:800000,
                 reciever:'Ben calz'
             }
 

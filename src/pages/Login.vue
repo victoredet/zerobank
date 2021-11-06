@@ -12,8 +12,8 @@
                 <h1 class="text-primary my-5">Welcome back! </h1>
                 <form action="" @submit.prevent="login()" class="">
                     <div class="form-group my-3">
-                        <label>Email</label>
-                        <input required autofocus v-model="email" name="email" type="email" class="form-control border-0 shadow">
+                        <label>User ID</label>
+                        <input required autofocus v-model="email" name="" type="text" class="form-control border-0 shadow">
                     </div>
                     <div class="form-group my-3 ">
                         <label>Password</label>

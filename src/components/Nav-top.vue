@@ -11,7 +11,6 @@
         
       </ul>
       <div class="d-flex">
-        <router-link class="nav-link text-white " to="/login" tabindex="-1">Contact</router-link>
         <a class="nav-link text-white" href="#about" tabindex="-1">About</a>
         <div class="" v-if="!this.$store.state.auth">
           <router-link class="nav-link text-white " to="/login" tabindex="-1">Sign in</router-link>
