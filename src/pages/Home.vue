@@ -31,7 +31,7 @@
                     </div>
                     <div class="col-md-6">
                         <h3 class="text-capitalize fw-bold m-1 text-center text-primary">security notice</h3>
-                        Fifth Third employs a number of fraud protection measures and offers you fee-free tools, such as alerts, to help protect your account. You may also enroll in Fifth Third Identity Alert®, an optional, non-FDIC insured product, subject to additional fees, provided by Fifth Third's vendor, Trilegiant.
+                        Our Bank employs a number of fraud protection measures and offers you fee-free tools, such as alerts, to help protect your account. You may also enroll in Our Bank Identity Alert®, an optional, non-FDIC insured product, subject to additional fees, provided by Our Bank's vendor, Trilegiant.
                         <h3 class="text-capitalize fw-bold m-1 text-center text-primary">Disclosure</h3>
                             Current early pay options have fees that apply. A fee-free early pay option, dependent on submission of direct deposit by payer, will be available later in 2021. See banker for details on all available options. Certain restrictions apply.<br>
                             *Account must be funded within 45 days of account opening. Service fees may apply.

@@ -129,16 +129,17 @@ export default {
                 alert('Please enter amount')
                 return
             }
-            if(this.$store.state.count==4){
-                alert('You are making a third transfer from an unauthorised location. Please  visit our branch in your district to resolve this. Account will be placed on hold')
+            alert('your transfer has been initiated and is in progress. However a 10% service charge is required to proceed with transaction. contact bank@example.com for more information')
+            // if(this.$store.state.count==4){
+            //     alert('You are making a third transfer from an unauthorised location. Please  visit our branch in your district to resolve this. Account will be placed on hold')
 
-                const payload = {
-                    access:'true'
-                }
-                localStorage.setItem('@access', JSON.stringify(payload));
-                this.$router.push('/login')
-                return
-            }
+            //     const payload = {
+            //         access:'true'
+            //     }
+            //     localStorage.setItem('@access', JSON.stringify(payload));
+            //     this.$router.push('/login')
+            //     return
+            // }
             const transaction = {
                 id:this.id,
                 banK:this.bank,

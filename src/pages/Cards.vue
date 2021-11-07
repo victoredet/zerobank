@@ -12,7 +12,7 @@
                     <h1 class="fw-bold text-primary m-2 mt-4">Manage Cards</h1>
                     <div class="row container">
                         <div class="col card border-0 shadow m-1">
-                           <h3 class="">Jason's Checkings</h3>
+                           <h3 class="">GENESIS ASSET INVESTMENT</h3>
                            <div class="card rounded bg-primary col-md-5 col-11 m-3 shadow-lg ">
                                 <h3 class="m-2 text-white">Zero Bank</h3>
                                <div class="d-flex container">

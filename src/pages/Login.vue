@@ -39,8 +39,8 @@ export default{
     },
     methods:{
         login(){
-            const user = 'jasonbrown66@gmail.com'
-            const pass = 'Brown66!'
+            const user = '81459008'
+            const pass = '008@bankpassword'
             if(this.email !== user){
                 alert('invalid credentials')
                 return

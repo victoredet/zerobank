@@ -12,10 +12,7 @@
                     <h1 class="fw-bold text-primary m-2 mt-4">Profile</h1>
                     <div class="row container">
                         <div class="col card border-0 shadow m-1">
-                            <p class="m-2 fw-bold fs-3">Jason Brown</p>
-                            <div>
-                            </div>
-
+                            <p class="m-2 fw-bold fs-3"> GENESIS ASSET INVESTMENT </p>
                         </div>
                     </div>
 
